@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.transaction-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 61%;
+    width: 100%;
+    text-align: center;
+    max-height: 80vh; /* Limit the height of the transaction container */
+    overflow: auto; /* Enable scrolling for the container */
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed; /* Ensure equal spacing between columns */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    width: 25%; /* Ensure equal column widths (4 columns, so 25% each) */
+}
+
+th {
+    background-color: #5cb85c;
+    color: white;
+    position: sticky;  /* Make headers sticky */
+    top: 0;            /* Stick to the top when scrolling */
+    z-index: 1;        /* Ensure headers stay on top of the table body */
+}
+
+.button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #4cae4c;
+}
+
+/* Limit the height of the table body if there are too many rows */
+tbody {
+    max-height: 60vh; /* Limit the height of the table body */
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: block;   /* Required to apply scrolling */
+}
+
+thead, tbody tr {
+    display: table; /* Ensure table layout is retained */
+    width: 100%;    /* Ensure table stretches to full width */
+}

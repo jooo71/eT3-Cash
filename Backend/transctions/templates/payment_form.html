@@ -1,0 +1,17 @@
+<!-- templates/payment_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PayPal Payment</title>
+</head>
+<body>
+    <h1>Pay with PayPal</h1>
+    <form method="post" action="{% url 'create_payment_paypal' %}">
+        {% csrf_token %}
+        <p>Amount: $100.00</p> <!-- Adjust amount as necessary or make dynamic if needed -->
+        <button type="submit">Pay Now</button>
+    </form>
+</body>
+</html>

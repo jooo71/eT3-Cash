@@ -1,0 +1,24 @@
+# et3_cash_project/Dockerfile
+
+FROM python:3.11-slim
+
+# Set work directory to the root folder where manage.py is located
+WORKDIR /app
+
+# Copy the requirements and install dependencies
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
+
+# Copy the entire project into the container
+COPY . /app
+
+# Run collectstatic command
+RUN python manage.py makemigrations --noinput
+RUN python manage.py migrate
+
+RUN python manage.py collectstatic --no-input 
+
+# RUN python manage.py runserver --nostatic
+
+# Start Gunicorn server
+CMD ["gunicorn", "-c", "gunicorn-cfg.py", "eT3_cash_project.wsgi:application"]

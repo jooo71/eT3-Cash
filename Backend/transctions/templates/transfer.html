@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{% static 'css/transfer.css' %} ?v={ v=1.0 }">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+</head>
+<body>
+
+<div class="transfer-container">
+    <h2>Transfer Funds</h2>
+    <input type="number" id="transfer-amount" placeholder="Amount" min="0" required>
+    <input type="text" id="recipient-phone" placeholder="Recipient Phone Number" required>
+    <button onclick="transfer()">Submit</button>
+    <!-- Placeholder for success/error message -->
+    <div id="message" style="margin-top: 10px;"></div>
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="{% static 'js/transfer.js' %}"></script>
+<button class="back-button" onclick="goBack()">Back</button>
+<script src="{% static 'js/button.js' %}"></script>
+
+</body>
+</html>

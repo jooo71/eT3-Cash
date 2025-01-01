@@ -1,0 +1,443 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script>
+        const data = {{ data|safe }};  // Pass the data to JavaScript
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',  // You can change the chart type
+            data: {
+                labels: data.map(item => item[0]),  // Assuming data is a list of tuples, adjust accordingly
+                datasets: [{
+                    label: 'My Data',
+                    data: data.map(item => item[1]),  // Adjust based on your SQL query result
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
+</body>
+</html> {% endcomment %}
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <table>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+            <th>Column 6</th>
+            <!-- Add more columns as needed -->
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row.0 }}</td>  <!-- Access data by index -->
+                <td>{{ row.1 }}</td>  <!-- Access data by index -->
+                <td>{{ row.2 }}</td>  <!-- Access data by index -->
+                <td>{{ row.3 }}</td>  <!-- Access data by index -->
+                <td>{{ row.4 }}</td>  <!-- Access data by index -->
+                <td>{{ row.5 }}</td>  <!-- Access data by index -->
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html> {% endcomment %}
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* Style for the chart containers to control width and height */
+        #transactionTypeAmountChart {
+            width: 50%; /* Width as 80% of the page width */
+            height: 10%; /* Height set to 400px, can be adjusted */
+            margin: 0 auto; /* Centers the canvas */
+        }
+
+        #dailyOperationsChart {
+            width: 80%; /* Width as 80% of the page width */
+            height: 10%; /* Height set to 400px, can be adjusted */
+            margin: 0 auto; /* Centers the canvas */
+        }
+    </style>
+    <style>
+        /* Style for the chart containers to control width and height */
+        #mostActiveUsersChart {
+            width: 80%; /* Width as 80% of the page width */
+            height: 1%; /* Height set to 400px, can be adjusted */
+            margin: 0 auto; /* Centers the canvas */
+        }
+
+        .chart-title {
+            size:1%%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 1%%;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    
+
+    <!-- Total Amount Per Transaction Type Chart -->
+    <canvas id="transactionTypeAmountChart"></canvas>
+    <script>
+        const transactionTypeAmountLabels = {{ transaction_type_amount_labels|safe }};
+        const transactionTypeAmountValues = {{ transaction_type_amount_values|safe }};
+        const transactionTypeAmountCtx = document.getElementById('transactionTypeAmountChart').getContext('2d');
+        new Chart(transactionTypeAmountCtx, {
+            type: 'doughnut',
+            data: {
+                labels: transactionTypeAmountLabels,
+                datasets: [{
+                    label: 'Transaction Types (Amount)',
+                    data: transactionTypeAmountValues,
+                    backgroundColor: [
+                    'red',    // Red
+                    'blue',   // Blue
+                    'green',  // Green
+                    'black',  // Black
+                    'yellow'  // Yellow
+                    ],
+                    borderColor: [
+                    'red',    // Red
+                    'blue',   // Blue
+                    'green',  // Green
+                    'black',  // Black
+                    'yellow'  // Yellow
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+    <div class="chart-container">
+        <div class="chart-title">Most Operations </div>
+        <canvas id="transactionTypeAmountChart"></canvas>
+    </div>
+    
+
+        <!-- Most Active Users Chart -->
+    <canvas id="mostActiveUsersChart"></canvas>
+    <script>
+        var ctx = document.getElementById('mostActiveUsersChart').getContext('2d');
+        var mostActiveUsersChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {{ most_active_users_ids|safe }},
+                datasets: [{
+                    label: 'Total Operations',
+                    data: {{ most_active_users_operations|safe }},
+                    backgroundColor: 'rgb(0, 54, 124)',
+                    borderColor: 'rgb(0, 54, 124)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Users'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Numbers of operations'
+                        }
+                    }
+                },
+                responsive :true
+            }
+        });
+    </script>
+    <div class="chart-container">
+        <div class="chart-title">Most Active Users </div>
+        <canvas id="mostActiveUsersChart"></canvas>
+    </div>
+    <canvas id="dailyOperationsChart" width="400" height="200"></canvas>
+    <script>
+        var dailyOperationDates = {{ daily_operation_dates|safe }};  // List of dates as strings, e.g., '2024-11-25'
+        var dailyOperationsCount = {{ daily_operations_count|safe }};  // Corresponding operations count
+    
+        var ctx = document.getElementById('dailyOperationsChart').getContext('2d');
+        var dailyOperationsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: dailyOperationDates,  // Dates as strings
+                datasets: [{
+                    label: 'Total Operations',
+                    data: dailyOperationsCount,  // Operations count
+                    fill: false,
+                    borderColor: 'blue',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'category',
+                        title: {
+                            display: true,
+                            text: 'Date'
+                        },
+                        reverse: true, 
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Operations Count'
+                        }
+                    }
+                },
+                responsive: true
+            }
+        });
+    </script>
+    <div class="chart-container">
+        <div class="chart-title">Most Operations in Date </div>
+        <canvas id="dailyOperationsChart"></canvas>
+    </div>
+</body>
+</html>
+
+ {% endcomment %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dashboard</title>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
+     <style>
+         /* Flex container to arrange charts horizontally */
+         .chart-container {
+             display: flex;
+             flex-wrap: wrap; /* Allow charts to wrap to the next line if necessary */
+             justify-content: space-between; /* Space out charts evenly */
+             margin-bottom: 20px;
+         }
+ 
+         /* Style for each individual chart container */
+         .chart {
+             width: 48%; /* Adjust width to make two charts fit in one line */
+             margin-bottom: 20px; /* Space between charts vertically */
+         }
+         #transactionTypeAmountChart {
+            width: 60%; /* Width as 80% of the page width */
+            height: 10%; /* Height set to 400px, can be adjusted */
+            margin: 0 auto; /* Centers the canvas */
+        }
+ 
+         /* Style for the chart title */
+         .chart-title {
+             text-align: center;
+             font-size: 24px;
+             font-weight: bold;
+             margin-bottom: 10px;
+             color: #333;
+         }
+ 
+     </style>
+ </head>
+ <body>
+     <h1>Dashboard</h1>
+ 
+     <!-- Chart Container for Transaction Type Amount and Most Active Users -->
+     <div class="chart-container">
+         <!-- Total Amount Per Transaction Type Chart -->
+         <div class="chart">
+             <div class="chart-title">Transaction Types (Amount)</div>
+             <canvas id="transactionTypeAmountChart"></canvas>
+         </div>
+ 
+         <!-- Most Active Users Chart -->
+         <div class="chart">
+             <div class="chart-title">Most Active Users</div>
+             <canvas id="mostActiveUsersChart"></canvas>
+         </div>
+     </div>
+ 
+     <!-- Chart Container for Daily Operations Chart -->
+     <div class="chart-container">
+         <!-- Daily Operations Chart -->
+         <div class="chart">
+             <div class="chart-title">Most Operations by Date</div>
+             <canvas id="dailyOperationsChart"></canvas>
+         </div>
+
+         <div class="chart">
+            <div class="chart-title">Most Operations by Hour</div>
+            <canvas id="hourlyOperationsChart"></canvas>
+        </div>
+     </div>
+ 
+     <script>
+         // Transaction Type Amount Chart
+         const transactionTypeAmountLabels = {{ transaction_type_amount_labels|safe }};
+         const transactionTypeAmountValues = {{ transaction_type_amount_values|safe }};
+         const transactionTypeAmountCtx = document.getElementById('transactionTypeAmountChart').getContext('2d');
+         new Chart(transactionTypeAmountCtx, {
+             type: 'doughnut',
+             data: {
+                 labels: transactionTypeAmountLabels,
+                 datasets: [{
+                     label: 'Transaction Types (Amount)',
+                     data: transactionTypeAmountValues,
+                     backgroundColor: ['rgb(0, 0, 255)', 'rgb(0, 142, 255)', 'rgb(106, 90, 205)', 'rgb(120, 120, 120)', 'rgb(60, 179, 113)'],
+                     borderColor: ['rgb(0, 0, 255)', 'rgb(0, 142, 255)', 'rgb(106, 90, 205)', 'rgb(120, 120, 120)', 'rgb(60, 179, 113)'],
+                     borderWidth: 1
+                 }]
+             },
+             options: {
+                 responsive: true
+             }
+         });
+ 
+         // Most Active Users Chart
+         var ctx = document.getElementById('mostActiveUsersChart').getContext('2d');
+         var mostActiveUsersChart = new Chart(ctx, {
+             type: 'bar',
+             data: {
+                 labels: {{ most_active_users_ids|safe }},
+                 datasets: [{
+                     label: 'Total Operations',
+                     data: {{ most_active_users_operations|safe }},
+                     backgroundColor: 'rgb(0, 54, 124)',
+                     borderColor: 'rgb(0, 54, 124)',
+                     borderWidth: 1
+                 }]
+             },
+             options: {
+                 scales: {
+                     x: {
+                         title: {
+                             display: true,
+                             text: 'Users'
+                         }
+                     },
+                     y: {
+                         beginAtZero: true,
+                         title: {
+                             display: true,
+                             text: 'Numbers of operations'
+                         }
+                     }
+                 },
+                 responsive: true
+             }
+         });
+ 
+         // Daily Operations Chart
+         var dailyOperationDates = {{ daily_operation_dates|safe }};
+         var dailyOperationsCount = {{ daily_operations_count|safe }};
+         var ctx = document.getElementById('dailyOperationsChart').getContext('2d');
+         var dailyOperationsChart = new Chart(ctx, {
+             type: 'line',
+             data: {
+                 labels: dailyOperationDates,
+                 datasets: [{
+                     label: 'Total Operations',
+                     data: dailyOperationsCount,
+                     fill: false,
+                     borderColor: 'blue',
+                     tension: 0.4
+                 }]
+             },
+             options: {
+                 scales: {
+                     x: {
+                         type: 'category',
+                         title: {
+                             display: true,
+                             text: 'Date'
+                         },
+                         reverse: true
+                     },
+                     y: {
+                         beginAtZero: true,
+                         title: {
+                             display: true,
+                             text: 'Operations Count'
+                         }
+                     }
+                 },
+                 responsive: true
+             }
+         });
+     </script>
+
+    <script>
+        // Data for Most Operations by Hour Chart
+        const hourlyLabels = {{ hourly_labels|safe }};
+        const hourlyValues = {{ hourly_values|safe }};
+        
+        const hourlyOperationsCtx = document.getElementById('hourlyOperationsChart').getContext('2d');
+        new Chart(hourlyOperationsCtx, {
+            type: 'bar',
+            data: {
+                labels: hourlyLabels,
+                datasets: [{
+                    label: 'Total Operations',
+                    data: hourlyValues,
+                    backgroundColor: 'rgb(0, 86, 124)',
+                    borderColor: 'rgb(0, 86, 124)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Hour of Day'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Operations'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+ </body>
+ </html>
+ 

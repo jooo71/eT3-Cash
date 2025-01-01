@@ -1,0 +1,6 @@
+transaction_type,sender_name,recipient_name,amount,transaction_date
+deposit,omar,,555.00,
+withdraw,youseif,,666.00,
+airtime,rawan,,100.00,
+transfer,youseif,omar,2000.00,
+bill,shreif,,150.00,

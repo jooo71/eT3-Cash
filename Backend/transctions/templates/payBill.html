@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Bill</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{% static 'css/payBill.css' %} ?v={ 1.0 }">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+</head>
+<body>
+
+<div class="pay-bill-container">
+    <h2>Pay Your Bill</h2>
+    <input type="text" id="bill-type" placeholder="Type of Bill" required>
+    <input type="number" id="bill-amount" placeholder="Amount" min="0" required>
+    <button onclick="payBill()">Submit</button>
+    <!-- Placeholder for success/error message -->
+    <div id="message"></div>
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="{% static 'js/payBill.js' %}"></script>
+<button class="back-button" onclick="goBack()">Back</button>
+<script src="{% static 'js/button.js' %}"></script>
+
+</body>
+</html>

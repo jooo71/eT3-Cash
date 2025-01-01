@@ -1,0 +1,19 @@
+.logout-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;  /* Position the button absolutely */
+    top: 4%;  /* Distance from the top */
+    left: 1%; /* Distance from the left */
+    width: auto; /* Let the width adjust to the content */
+    display: inline-block; /* Prevent taking full width */
+}
+
+.logout-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

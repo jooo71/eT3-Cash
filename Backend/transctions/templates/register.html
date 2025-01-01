@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %} ?v={ 1.0 }">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <div id="message"></div>
+
+        <form id="register-form">
+            <div class="form-group">
+                <!-- <label for="name">Name</label> -->
+                <input type="text" id="name" name="name" placeholder="Name"  required>
+            </div>
+            <div class="form-group">
+                <!-- <label for="phone-number">Phone Number</label> -->
+                <input type="text" id="phone-number" name="phone_number" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <!-- <label for="confirm-password">Confirm Password</label> -->
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="button">Register</button>
+        </form>
+    </div>
+
+    <script src="{% static 'js/register.js' %}"></script>
+<button class="back-button" onclick="goBack()">Back</button>
+<script src="{% static 'js/button.js' %}"></script>
+</body>
+</html>

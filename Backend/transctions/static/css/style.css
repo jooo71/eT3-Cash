@@ -1,0 +1,126 @@
+/* General Reset
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Jost', sans-serif;
+}
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.main {
+width: 350px;
+height: 500px;
+background: url("https://doc-08-2c-docs.googleusercontent.com/docs/image-url") no-repeat center / cover;
+border-radius: 10px;
+box-shadow: 5px 20px 50px #000;
+position: relative;
+}
+
+.buttons {
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 100%;
+}
+
+.button {
+width: 100px;
+height: 40px;
+background: #573b8a;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+transition: 0.2s ease;
+}
+
+.button:hover {
+background: #6d44b8;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+form label {
+color: #fff;
+font-size: 2.3em;
+margin: 50px;
+font-weight: bold;
+cursor: pointer;
+transition: .5s ease-in-out;
+}
+
+form input {
+width: 60%;
+padding: 12px;
+margin: 20px auto;
+border: none;
+background: #e0dede;
+border-radius: 5px;
+outline: none;
+}
+
+form button {
+width: 60%;
+height: 40px;
+background: #573b8a;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1em;
+font-weight: bold;
+margin-top: 30px;
+transition: 0.2s ease-in;
+}
+
+form button:hover {
+background: #6d44b8;
+}
+
+.signup, .login {
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.login {
+background: #eee;
+border-radius: 60% / 10%;
+transform: translateY(-180px);
+transition: .8s ease-in-out;
+}
+
+.login label {
+color: #573b8a;
+transform: scale(0.6);
+}
+
+#chk {
+display: none;
+}
+
+#chk:checked ~ .login {
+transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label {
+transform: scale(1);    
+}
+
+#chk:checked ~ .signup label {
+transform: scale(0.6);
+} */

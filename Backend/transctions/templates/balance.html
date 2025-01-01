@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance</title>
+    <link rel="stylesheet" href="{% static 'css/balance.css' %} ?v={ v=1.0 }">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+</head>
+<body>
+
+<div class="balance-container">
+    <h2>Your Current Balance</h2>
+    <div id="balance-amount"></div>
+    <div id="message"></div>
+    <!-- <button class="button" onclick="balance()">Check Balance</button> -->
+</div>
+
+<script src="{% static 'js/balance.js' %}"></script>
+
+<script>
+    // Automatically call the balance function when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        balance(); // Call balance function on page load
+    });
+</script>
+<button class="back-button" onclick="goBack()">Back</button>
+<script src="{% static 'js/button.js' %}"></script>
+</body>
+</html>

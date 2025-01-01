@@ -1,0 +1,6 @@
+transaction_type,sender_id,recipient_id,amount,transaction_date
+withdraw,2,,30.0,2024-12-15 17:16:35
+airtime,1,,22.0,2024-12-15 17:16:35
+deposit,,2,555.0,2024-12-15 17:16:35
+transfer,3,4,15.0,2024-12-15 17:16:35
+bill,4,,60.0,2024-12-15 17:16:35

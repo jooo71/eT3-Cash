@@ -1,0 +1,23 @@
+<!-- templates/payment_success.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Successful</title>
+</head>
+<body>
+    <h1>Payment Success</h1>
+    <p>Thank you for your payment! Your transaction was successful.</p>
+
+    <h3>Transaction Details</h3>
+    <ul>
+        <li><strong>Payment ID:</strong> {{ payment_details.id }}</li>
+        <li><strong>Amount:</strong> {{ payment_details.transactions.0.amount.total }} {{ payment_details.transactions.0.amount.currency }}</li>
+        <li><strong>Status:</strong> {{ payment_details.state }}</li>
+        <li><strong>Description:</strong> {{ payment_details.transactions.0.description }}</li>
+    </ul>
+
+    <a href="/">Return to Home</a>
+</body>
+</html>

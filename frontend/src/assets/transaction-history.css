@@ -1,0 +1,63 @@
+/* Center the transaction history section on the page */
+.transaction-history-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 6%; /* Rounded corners */
+    box-shadow: 1px 1px 10px 6px rgb(0 0 0 / 56%);
+    text-align: center;
+  }
+  
+  .transaction-history-container h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styling */
+  .transaction-history-container button {
+    width: 100%;
+    background-color: #4479b3;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .transaction-history-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Transaction list styling */
+  .transactions {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .transactions ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .transactions li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .transactions li:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #e74c3c;
+    margin-top: 20px;
+  }
+  

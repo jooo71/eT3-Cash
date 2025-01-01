@@ -1,0 +1,37 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="{% static 'css/transactionHistory.css' %} ?v={ v=1.0 }">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+</head>
+<body>
+
+<div class="transaction-container">
+    <h2>Transaction History</h2>
+    <div id="message"></div>
+    <table id="transaction-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Recipient</th>
+                <!-- <th>Balance After</th> -->
+            </tr>
+        </thead>
+        <tbody id="transaction-body">
+            <!-- Transactions will be populated here -->
+        </tbody>
+    </table>
+        
+</div>
+
+<script src="{% static 'js/transactionHistory.js' %}"></script>
+<button class="back-button" onclick="goBack()">Back</button>
+<script src="{% static 'js/button.js' %}"></script>
+</body>
+</html>

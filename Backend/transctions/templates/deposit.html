@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Deposit</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{% static 'css/deposit.css' %} ?v={ v=1.0 }">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+</head>
+<body>
+
+<div class="deposit-container">
+    <h2>Enter Deposit Amount</h2>
+    <input type="number" id="deposit-amount" placeholder="Amount" min="0">
+    <button onclick="submitDeposit()">Submit</button>
+    <!-- Placeholder for success/error message -->
+    <div id="message"></div> <!-- This will hold success/error messages -->
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="{% static 'js/deposit.js' %}"></script>
+<button class="back-button" onclick="goBack()">Back</button>
+<script src="{% static 'js/button.js' %}"></script>
+
+</body>
+</html>

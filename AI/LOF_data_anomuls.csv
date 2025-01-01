@@ -1,0 +1,15 @@
+user_id,transaction_role,transaction_type_key,amount,transaction_date,transaction_type,anomaly,is_anomaly
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,received,3,1450.0,2024-11-22 22:59:53.000,deposit,-1,True
+6,sent,5,1000.0,2024-12-07 01:27:58.663,withdraw,-1,True
+6,sent,5,1000.0,2024-12-07 01:47:56.060,withdraw,-1,True
+6,sent,4,1000.0,2024-12-07 01:48:36.327,transfer,-1,True

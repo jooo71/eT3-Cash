@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw Funds</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{% static 'css/withdraw.css' %} ?v={ v=1.0 }">
+    <link rel="stylesheet" href="{% static 'css/button.css' %}">
+</head>
+<body>
+
+<div class="withdraw-container">
+    <h2>Enter Withdrawal Amount</h2>
+    <input type="number" id="withdraw-amount" placeholder="Amount" min="0">
+    <button onclick="submitWithdraw()">Submit</button>
+    <!-- Placeholder for success/error message -->
+    <div id="message" style="color: green; margin-top: 10px;"></div>
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="{% static 'js/withdraw.js' %}"></script>
+<button class="back-button" onclick="goBack()">Back</button>
+<script src="{% static 'js/button.js' %}"></script>
+
+</body>
+</html>

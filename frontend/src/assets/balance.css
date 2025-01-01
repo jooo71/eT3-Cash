@@ -1,0 +1,53 @@
+/* Center the balance check section on the page */
+.balance-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 6%; /* Rounded corners */
+    box-shadow: 1px 1px 10px 6px rgb(0 0 0 / 56%);
+    text-align: center;
+  }
+  
+  .balance-container h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styling */
+  .balance-container button {
+    width: 100%;
+    background-color: #4479b3;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .balance-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Success and error messages */
+  .balance-message {
+    font-weight: bold;
+    color: #04182e;
+    margin-top: 15px;
+  }
+  
+  .error {
+    color: #e74c3c;
+    margin-top: 15px;
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 500px) {
+    .balance-container {
+      max-width: 90%;
+      padding: 15px;
+    }
+  }
+  

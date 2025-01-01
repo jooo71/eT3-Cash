@@ -1,0 +1,141 @@
+# version: '3.7'
+
+# services:
+#     app-youseifwallet:
+#         build: .
+#         command: bash runserver.sh
+#         volumes:
+#             - ./:/usr/src/app/
+#         environment:
+#             - DEBUG=True
+#             - SECRET_KEY=foo
+#             - SQL_ENGINE=django.db.backends.postgresql
+#             - SQL_DB=postgres
+#             - SQL_USER=internship2024
+#             - SQL_PASSWORD=internship2024123
+#             - SQL_HOST=postgres-internship2024-kalimatcash
+#             - SQL_PORT=5432
+#         depends_on:
+#             - postgres-internship2024-kalimatcash
+
+#     worker-youseifwallet:
+#         build: .
+#         command: bash runworker.sh
+#         volumes:
+#             - ./:/usr/src/app/
+#         environment:
+#             - DEBUG=True
+#             - SECRET_KEY=foo
+#             - SQL_ENGINE=django.db.backends.postgresql
+#             - SQL_DB=postgres
+#             - SQL_USER=internship2024
+#             - SQL_PASSWORD=internship2024123
+#             - SQL_HOST=postgres-internship2024-kalimatcash
+#             - SQL_PORT=5432
+#             - CELERY_BROKER_URL=amqp://internship2024:internship2024123@rabbit-internship2024-kalimatcash:5672//
+#         depends_on:
+#             - postgres-internship2024-kalimatcash
+#             - rabbit-internship2024-kalimatcash
+
+#     beat-youseifwallet:
+#         build: .
+#         command: bash runbeat.sh
+#         volumes:
+#             - ./:/usr/src/app/
+#         environment:
+#             - DEBUG=True
+#             - SECRET_KEY=foo
+#             - SQL_ENGINE=django.db.backends.postgresql
+#             - SQL_DB=postgres
+#             - SQL_USER=internship2024
+#             - SQL_PASSWORD=internship2024123
+#             - SQL_HOST=postgres-internship2024-kalimatcash
+#             - SQL_PORT=5432
+#             - CELERY_BROKER_URL=amqp://internship2024:internship2024123@rabbit-internship2024-kalimatcash:5672//
+#         depends_on:
+#             - postgres-internship2024-kalimatcash
+#             - rabbit-internship2024-kalimatcash
+     
+#     postgres-internship2024-kalimatcash:
+#         image: postgres
+#         volumes:
+#             - postgres_data:/var/lib/postgresql/data/
+#         environment:
+#             - POSTGRES_USER=internship2024
+#             - POSTGRES_PASSWORD=internship2024123
+#             - POSTGRES_DB=postgres
+
+#     rabbit-internship2024-kalimatcash:
+#         image: rabbitmq:management
+#         volumes:
+#             - rabbit_data:/var/lib/rabbitmq/mnesia
+#         environment:
+#             - RABBITMQ_DEFAULT_USER=internship2024
+#             - RABBITMQ_DEFAULT_PASS=internship2024123
+#         ports:
+#             - 15672:15672
+
+#     nginx-internship2024-kalimatcash:
+#         image: nginx
+#         volumes:
+#             - ./nginx_conf:/etc/nginx/conf.d
+#             - ./media:/usr/src/app/media
+#             - ./static:/usr/src/app/static
+#         ports:
+#             - 80:80
+#         depends_on:
+#             - app-youseifwallet
+            
+#     front-internship2024-kalimatcash:
+#         build: C:\Users\2\Documents\GitHub\ET3_TASKS\frontend
+
+#         ports:
+#             - 8080:80
+#         depends_on:
+#             - app-youseifwallet
+            
+
+# volumes:
+#   postgres_data:
+#   rabbit_data:
+
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./Backend  # Set the context to the root folder where ET3_TASKS is located
+      dockerfile: dockerfile  # Path to Dockerfile
+    container_name: backend
+    command: gunicorn -c gunicorn-cfg.py eT3_cash_project.wsgi:application
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./Backend:/app  # Mount the root folder so manage.py is accessible
+    ports:
+      - 8000:8002
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    container_name: frontend
+    command: npm run serve
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 8080:8080
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx_conf/nginx.conf:/etc/nginx/nginx.conf
+      - ./frontend/dist:/app/dist
+    depends_on:
+      - backend
+      - frontend

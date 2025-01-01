@@ -1,0 +1,86 @@
+/* dashboard.css */
+#dashboard {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #dashboard header {
+    padding: 20px;
+    background-color: #4479b3;
+    width: 100%;
+    text-align: center;
+  }
+  
+  #dashboard header h1 {
+    color: white;
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  #dashboard main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+  }
+  
+  #dashboard .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #dashboard .row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 15px;
+  }
+  
+  #dashboard .dashboard-button {
+    padding: 15px 30px;
+    background-color: #4479b3;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+  }
+  #dashboard .dashboard-button.logout{
+    margin-left:491% ;
+    width: 9%;
+    margin-top: -37%;
+    
+  }
+  
+  #dashboard .dashboard-button:hover {
+    background-color: #0056b3;
+  }
+  
+  #dashboard .dashboard-button.logout {
+    background-color: #000000bf;
+  }
+  
+  #dashboard .dashboard-button.logout:hover {
+    background-color: #e14a4a;
+  }
+  
+  #dashboard .back-button {
+    margin-top: 30px;
+  }
+  
+.position {
+  margin-top: 2%;
+}
