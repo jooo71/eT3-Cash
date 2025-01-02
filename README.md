@@ -14,30 +14,34 @@ ________________________________________________________________________________
   * Responsive Website: Built using HTML, CSS, JavaScript, and Vue.js for an intuitive interface.
   * Mobile Application: Optimized for seamless on-the-go transactions, mirroring website functionalities.
 
-* ### <img src="https://github.com/user-attachments/assets/6f867be4-c7e8-4313-99fd-e97d33ec02f7" alt="Frontend" width="18"/> Backend
+* ### <img src="https://github.com/user-attachments/assets/6f867be4-c7e8-4313-99fd-e97d33ec02f7" alt="Backend" width="18"/> Backend
   * Developed using Django and Django REST Framework for robust API management.
   * SQL Server Database: Powering user profiles, transactions, and balances with a star schema for analytics.
 
-* ### 📱 Mobile App
+* ### <img src="https://github.com/user-attachments/assets/0d034226-fc35-45b8-a49f-f44b97fac0be" alt="Mobile App" width="18"/> Mobile App
   * Flutter for seamless cross-platform mobile experiences on iOS and Android.
 
-* ### <img src="https://github.com/user-attachments/assets/cc543b8b-1a4b-4afc-90ed-334639bb0535" alt="Frontend" width="18"/> Dashboard
+* ### <img src="https://github.com/user-attachments/assets/cc543b8b-1a4b-4afc-90ed-334639bb0535" alt="Dashboard" width="18"/> Dashboard
   * Interactive dashboard utilizing Chart.js for visual data representation.
 
-* ### AI Integration
+* ### <img src="https://github.com/user-attachments/assets/7b10bb70-33de-4f0d-8f87-ab582f311fa8" alt="AI Integration" width="18"/> AI Integration
   
   * Transaction Insights: Personalized recommendations using K-Means clustering.
   * Fraud Detection: Advanced algorithms (Z-Score, Isolation Forest, SVM) ensure secure transactions.
  
-* ### Testing
+* ### <img src="https://github.com/user-attachments/assets/5ea0e4b2-8dfc-4bf4-9aac-f873885c0837" alt="Testing" width="18"/> Testing
   
   * Unit Testing: Comprehensive tests using Django unittest.
   * Automated Testing: Cypress ensures smooth user flows.
-  * 
-* ### Deployment
+
+* ### <img src="https://github.com/user-attachments/assets/326315a3-2432-4df5-8363-16604566d472" alt="Deployment" width="18"/> Deployment
   
   * Containerized with Docker.
   * Powered by Nginx (reverse proxy) and Gunicorn (application server).
+    
+* ### <img src="https://github.com/user-attachments/assets/704f47d0-d833-4d32-9108-30c4ae86de54" alt="DevOps" width="18"/> DevOps
+
+  * CI/CD pipelines ensuring smooth deployment and maintenance workflows.   
  ____________________________________________________________________________________________________________
 
  ##
