@@ -102,6 +102,11 @@ ________________________________________________________________________________
 </div>
 
 <div>
+ <img src="https://github.com/user-attachments/assets/f6ccf0b4-70cf-4d27-bba7-cc417b4a242d" alt="Python" width="270" height="600" />
+ <img src="https://github.com/user-attachments/assets/6c976429-81af-4ac7-a6a1-a13d4686d053" alt="Python" width="270" height="600" />
+</div>
+
+<div>
  <img src="https://github.com/user-attachments/assets/020e66fe-c779-4300-ab46-a5cc0bb08262" alt="Python" width="270" height="380"/>
  <img src="https://github.com/user-attachments/assets/c29fd293-6e31-4df1-ae1e-a694fb2beb1e" alt="Python" width="270" height="380"/>
  <img src="https://github.com/user-attachments/assets/3afd5cb4-38fe-4195-905a-4ce5504bd4cd" alt="Python" width="270" height="380"/>
