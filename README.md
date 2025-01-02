@@ -82,7 +82,7 @@ npm run serve
 _______________________________________________________________________________________________________________________________
 ## Screenshots 📸
 <div>
- <img src="https://github.com/user-attachments/assets/020e66fe-c779-4300-ab46-a5cc0bb08262" alt="Python" width="270"/>
+ <img src="https://github.com/user-attachments/assets/020e66fe-c779-4300-ab46-a5cc0bb08262" alt="Python" width="270" height="380"/>
  <img src="https://github.com/user-attachments/assets/c29fd293-6e31-4df1-ae1e-a694fb2beb1e" alt="Python" width="270" height="380"/>
  <img src="https://github.com/user-attachments/assets/3afd5cb4-38fe-4195-905a-4ce5504bd4cd" alt="Python" width="270" height="380"/>
  <img src="https://github.com/user-attachments/assets/1d87d774-b5a3-42d0-ad82-75a380c0427d" alt="Python" width="910" height="380"/>
