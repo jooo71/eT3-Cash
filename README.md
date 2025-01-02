@@ -90,3 +90,12 @@ ________________________________________________________________________________
 <div>
  <img src="https://github.com/user-attachments/assets/ac557d28-2145-4ec2-8fcc-a8f72a504f48" alt="Python" width="910" height="380"/>
 </div>
+ <img src="https://github.com/user-attachments/assets/75468b86-379f-471f-9069-263c75d2439e" alt="Python" width="910" height="380"/>
+ <img src="https://github.com/user-attachments/assets/89ed2b61-1968-4356-869b-4508c63c6cd4" alt="Python" width="910" height="380"/>
+ <img src="https://github.com/user-attachments/assets/5bf4a2f2-60ab-4773-9cbc-d2f1bc420451" alt="Python" width="910" height="380"/>
+ <img src="https://github.com/user-attachments/assets/497b4d07-adee-46fe-863e-b726e68b0d10" alt="Python" width="910" height="380"/>
+ <img src="https://github.com/user-attachments/assets/96212828-591d-49d0-9046-3e6d2f2c4ba0" alt="Python" width="910" height="380"/>
+
+
+
+
