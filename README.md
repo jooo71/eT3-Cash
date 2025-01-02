@@ -56,6 +56,28 @@ ________________________________________________________________________________
 | 📊 Analytics     | Data Warehouse and BI Tools                   | 
 | <img src="https://github.com/user-attachments/assets/704f47d0-d833-4d32-9108-30c4ae86de54" alt="DevOps" width="18"/>  DevOps     | CI/CD Pipelines, Docker                  |
 |  🗄️ Database     | SQL Server                 | 
+_______________________________________________________________________________________________________________________________
 
+## Installation & Setup 💻
 
+* Clone the repository:
+ ```
+ git clone https://github.com/jooo71/the-wallet.git  
+ cd the-wallet
+ ```
+* Install dependencies:
+```
+pip install -r requirements.txt 
+```
+ 
+ * Run Backend: 
+```
+python manage.py runserver 
+```
 
+  * Run Frontend:
+```
+npm run serve  
+```    
+_______________________________________________________________________________________________________________________________
+## Screenshots 📸
