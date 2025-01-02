@@ -4,4 +4,7 @@ ________________________________________________________________________________
 
 <img src="https://github.com/user-attachments/assets/b47db1bc-5e38-4c93-a59b-8ae4b077a0f2" alt="image" width="700"/>
 
-# The Wallet 🚀
+# The Wallet <img src="https://github.com/user-attachments/assets/c07464db-a1cf-484e-b6b7-b8ed61ce54b2" alt="10149443" width="30"/>
+
+
+
