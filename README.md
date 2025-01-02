@@ -42,7 +42,20 @@ ________________________________________________________________________________
 * ### <img src="https://github.com/user-attachments/assets/704f47d0-d833-4d32-9108-30c4ae86de54" alt="DevOps" width="18"/> DevOps
 
   * CI/CD pipelines ensuring smooth deployment and maintenance workflows.   
- ____________________________________________________________________________________________________________
+ _______________________________________________________________________________________________________________________________
 
- ##
+ ## Tech Stack 🛠️
+ | Component               | Technology                                             
+|-----------------------|---------------------------------------------------------
+| <img src="https://github.com/user-attachments/assets/97b8f913-921e-4699-98a9-a092325c059f" alt="Frontend" width="18"/> Frontend    | Vue.js, HTML, CSS, JS, TS          | 
+| <img src="https://github.com/user-attachments/assets/6f867be4-c7e8-4313-99fd-e97d33ec02f7" alt="Backend" width="18"/> Backend  | 	Django     | 
+| <img src="https://github.com/user-attachments/assets/0d034226-fc35-45b8-a49f-f44b97fac0be" alt="Mobile App" width="18"/> Mobile App    | Flutter      | 
+| <img src="https://github.com/user-attachments/assets/cc543b8b-1a4b-4afc-90ed-334639bb0535" alt="Dashboard" width="18"/> Dashboard         | Chart.js  | 
+| <img src="https://github.com/user-attachments/assets/5ea0e4b2-8dfc-4bf4-9aac-f873885c0837" alt="Testing" width="18"/>  Testing      | Django, Automated Frameworks                     | 
+| <img src="https://github.com/user-attachments/assets/7b10bb70-33de-4f0d-8f87-ab582f311fa8" alt="AI Integration" width="18"/> AI Integration      | Python, ML                     | 
+| 📊 Analytics     | Data Warehouse and BI Tools                   | 
+| <img src="https://github.com/user-attachments/assets/704f47d0-d833-4d32-9108-30c4ae86de54" alt="DevOps" width="18"/>  DevOps     | CI/CD Pipelines, Docker                  |
+|  🗄️ Database     | SQL Server                 | 
+
+
 
