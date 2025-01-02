@@ -81,7 +81,7 @@ npm run serve
 ```    
 _______________________________________________________________________________________________________________________________
 ## Screenshots 📸
-
+### Mobile Application:
 <div>
  <img src="https://github.com/user-attachments/assets/6236227c-894a-411f-9aef-7d427c4cd135" alt="Python" width="270" height="600" />
  <img src="https://github.com/user-attachments/assets/a13f6665-5191-4415-b07d-07fa0eb0526f" alt="Python" width="270" height="600" />
@@ -105,7 +105,9 @@ ________________________________________________________________________________
  <img src="https://github.com/user-attachments/assets/f6ccf0b4-70cf-4d27-bba7-cc417b4a242d" alt="Python" width="270" height="600" />
  <img src="https://github.com/user-attachments/assets/6c976429-81af-4ac7-a6a1-a13d4686d053" alt="Python" width="270" height="600" />
 </div>
+_______________________________________________________________________________________________________________________________
 
+### Website:
 <div>
  <img src="https://github.com/user-attachments/assets/020e66fe-c779-4300-ab46-a5cc0bb08262" alt="Python" width="270" height="380"/>
  <img src="https://github.com/user-attachments/assets/c29fd293-6e31-4df1-ae1e-a694fb2beb1e" alt="Python" width="270" height="380"/>
