@@ -1,0 +1,18 @@
+experiment_id,description,control_result,test_result,result_type,result_value,metadata_date,metadata_location,metadata_researcher
+E123,Growth rate of plants under different light conditions,0.2 cm/day,0.5 cm/day,growth_index,2.5,15/01/2023,Lab A,Dr. Green
+E124,Effect of temperature on enzyme activity,No activity,Incresed activity at 37°C,temperature_effectiveness,0.8,02/10/23,Lab B,Dr. Blue
+E125,Study of microbial growth in different pH levels,Neutral growth,,growth_rate,,12/03/2023,Lab C,Dr. Red
+E126,Comparison of fuel efficiency in hybrid vs. electric cars,20 mpg,50 mpg,efficiency_increase,30%,22/04/2023,Field A,Dr. Yellow
+E127,Effect of various diets on weight loss,1 kg/week,2.5 kg/week,weight_loss_ratio,2.5,18/05/2023,Lab D,Dr. White
+E128,Impact of water hardness on detergent effectiveness,50% stain removal,80% stain removal,effectiveness_gain,30,22/06/2023,Lab E,Dr. Black
+E129,Analysis of chemical reaction rates at different temperatures,Slow reaction,Rapid reaction at 60°C,reaction_time,15 mins,15/07/2023,Lab F,Dr. Orange
+E130,Testing different water purification methods,0.5 ppm contaminants,0.1 ppm contaminants with new method,purity_increase,80%,08/05/2023,Lab G,Dr. Purple
+E131,Effects of varying light intensities on solar panel efficiency,80% efficiency,90% efficiency at high intensity,efficiency_gain,10%,20/09/2023,Field B,Dr. Gray
+E132,Comparative study of different insulation materials,Standard insulation,Improved thermal resistance with new material,thermal_resistance,High,10/10/2023,Lab H,Dr. Brown
+E133,Impact of different exercise regimes on cardiovascular health,Moderate improvement,Significant improvement with high-intensity training,heart_health_index,4.2,05/11/2023,Lab I,Dr. Pink
+E134,Study on the durability of new construction materials,5 years,10 years,durability_increase,5,12/12/2023,Site A,Dr. Silver
+E135,Effects of different fertilizers on crop yield,500 kg/acre,700 kg/acre,yield_increase,40%,18/12/2023,Field C,Dr. Gold
+E136,Study of air quality improvements using different filtration systems,PM2.5 reduction by 30%,PM2.5 reduction by 60% with new system,air_quality_index,2,20/08/2023,Lab J,Dr. Cyan
+E137,Effects of UV radiation on bacterial growth,Bacterial growth normal,Bacterial growth reduced by 75%,bacterial_reduction_index,3,15/09/2023,Lab K,Dr. Magenta
+E138,Comparison of battery life in different smartphone models,Battery life of 10 hours,Battery life of 15 hours,battery_life_gain,50%,25/11/2023,Lab L,Dr. Violet
+E139,Impact of different teaching methods on student performance,Moderate improvement,Significant improvement with interactive learning,performance_index,3.8,10/12/2023,School A,Dr. Indigo
